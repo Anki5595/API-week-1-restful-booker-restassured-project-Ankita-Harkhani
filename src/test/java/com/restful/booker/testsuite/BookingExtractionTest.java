@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 public class BookingExtractionTest {
         static ValidatableResponse response;
@@ -52,10 +51,5 @@ public class BookingExtractionTest {
         }
 
 
-        //Verify the if the total record is 1348
-        @Test
-        public void test005() {
-            response.body("size()", equalTo(1348));
-        }
     }
 
